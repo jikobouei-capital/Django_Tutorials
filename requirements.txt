@@ -1,0 +1,9 @@
+Django
+numpy
+scipy
+psycopg2-binary
+django-crispy-forms
+django-filter
+pytz
+django-tailwind
+django-bootstrap-v5
