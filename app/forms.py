@@ -12,13 +12,13 @@ class ItemForm(forms.ModelForm):
                     'memo': forms.Textarea(attrs={'rows':4}),
                   }
 
-class ItemEdit(forms.ModelForm):
-    class Meta:
-        model = Item
-        fields = ('name','age','sex','memo')
-        widgets = {
-                    'name': forms.TextInput(attrs={'placeholder':'編集'}),
-                    'age': forms.NumberInput(attrs={'min':1}),
-                    'sex': forms.RadioSelect(),
-                    'memo': forms.Textarea(attrs={'rows':4}),
-                  }
+# class ItemEdit(forms.ModelForm):
+#     class Meta:
+#         model = Item
+#         fields = ('name','age','sex','memo')
+#         widgets = {
+#                     'name': forms.TextInput(attrs={'placeholder':'編集'}),
+#                     'age': forms.NumberInput(attrs={'min':1}),
+#                     'sex': forms.RadioSelect(),
+#                     'memo': forms.Textarea(attrs={'rows':4}),
+#                   }

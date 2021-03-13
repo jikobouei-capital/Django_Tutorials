@@ -7,7 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Item
 from .filters import ItemFilter
-from .forms import ItemForm,ItemEdit
+from .forms import ItemForm
 # Create your views here.
 
 
@@ -41,7 +41,7 @@ class ItemCreateView(LoginRequiredMixin,CreateView):
 
 class ItemUpdateView(LoginRequiredMixin,UpdateView):
     model=Item
-    form_class=ItemEdit
+    form_class=ItemForm
     success_url=reverse_lazy('index')
 
 class ItemDeleteView(LoginRequiredMixin,DeleteView):

@@ -1,5 +1,7 @@
 from django.db import models
 from django.core import validators
+from django.utils import timezone as tz
+import datetime as dt
 # Create your models here.
 
 class Item(models.Model):
@@ -32,8 +34,12 @@ class Item(models.Model):
     )
     created_at = models.DateTimeField(
         verbose_name='登録日',
-        auto_now_add=True
+        default=tz.now
     )
+
+    # @property
+    # def is_empty(self):
+    #     return not bool(self.memo)
 
     # 以下は管理サイト上の表示設定
     def __str__(self):

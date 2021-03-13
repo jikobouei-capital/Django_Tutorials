@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import ItemCreateView,ItemDetailView,ItemFilterView,ItemUpdateView,ItemDeleteView
-
+# app_name=app
 urlpatterns=[
     path('',ItemFilterView.as_view(),name='index'),
     
